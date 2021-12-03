@@ -1,0 +1,37 @@
+.recipe {
+  background-color: #081c15;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.1s;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  margin: 20px;
+}
+
+.recipe:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+
+.recipe-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #f8f9fa;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.recipe-poster {
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+}
