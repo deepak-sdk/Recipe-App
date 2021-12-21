@@ -7,17 +7,17 @@ import classes from "./Cart.module.css";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx);
+  // console.log(cartCtx);
 
   const totalAmount = `₹${+cartCtx.totalAmount}`;
 
   const hasItem = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = (id) => {
-    cartCtx.removeItem(id)
+    cartCtx.removeItem(id);
   };
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem({...item, amount:1})
+    cartCtx.addItem({ ...item, amount: 1 });
   };
 
   const cartItems = (
@@ -28,8 +28,8 @@ const Cart = (props) => {
           name={item.name}
           price={item.price}
           amount={item.amount}
-          onRemove={cartItemRemoveHandler.bind(null,item.id)}
-          onAdd={cartItemAddHandler.bind(null,item)}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>
@@ -46,7 +46,11 @@ const Cart = (props) => {
         <Button className={classes["button--alt"]} onClick={props.onClose}>
           Close
         </Button>
-        {hasItem && <Button className={classes.button}>Order</Button>}
+        {hasItem && (
+          <Button onClick={()=>console.log("Ordered")} className={classes.button}>
+            Order
+          </Button>
+        )}
       </div>
     </Modal>
   );
