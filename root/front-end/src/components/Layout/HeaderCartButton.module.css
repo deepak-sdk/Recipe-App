@@ -2,7 +2,7 @@
     cursor: pointer;
     font: inherit;
     border: none;
-    background-color: #4d7feb41;
+    background-color: rgba(78, 78, 78, 0.192);
     color: white;
     padding: 0.75rem 3rem;
     display: flex;
