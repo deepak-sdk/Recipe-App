@@ -1,15 +1,5 @@
-.recipe-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-    margin: 20px;
-  }
-
 .recipe {
-    background-color: #1A5653;
-    border-radius: 10px;
+    background-color: #1a5653;
     overflow: hidden;
     transition: 0.4s;
 }
@@ -21,11 +11,7 @@
     cursor: pointer;
 }
 
-.recipe-name {
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #f8f9fa;
-    padding: 10px;
+.recipe-name-price {
     transition: 0.2s;
 }
 
@@ -33,4 +19,29 @@
     width: 450px;
     height: 250px;
     object-fit: cover;
+}
+
+.recipe-details {
+    display: flex;
+    padding: 0 20px 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #f8f9fa;
+}
+
+.recipe-details p {
+    margin: 0;
+}
+
+.recipe-summary h3 {
+    margin: 0;
+}
+
+.recipe-summary {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    padding: 20px;
 }
